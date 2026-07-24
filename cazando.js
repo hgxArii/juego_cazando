@@ -128,18 +128,26 @@ function generarComida(){
 
 }
 function iniciarJuego(){
-    puntos = 0;
-tiempo = 10;
-    gatoX=(500-ANCHO_GATO)/2; 
-    gatoY=(500-ALTO_GATO)/2;
-    generarComida();
-    graficarGato();
-    graficarComida(); 
-    document.getElementById("puntos").textContent = puntos;
-document.getElementById("tiempo").textContent = tiempo;
 
-clearInterval(intervalo);
-intervalo = setInterval(restarTiempo,1000);
+    clearInterval(intervalo);
+
+    puntos = 0;
+    tiempo = 10;
+
+    gatoX = (500 - ANCHO_GATO) / 2;
+    gatoY = (500 - ALTO_GATO) / 2;
+
+    generarComida();
+
+    document.getElementById("puntos").textContent = puntos;
+    document.getElementById("tiempo").textContent = tiempo;
+
+    limpiarCanvas();
+    graficarGato();
+    graficarComida();
+
+    intervalo = setInterval(restarTiempo,1000);
+
 }
 
 function graficarRectangulo(x,y,ancho,alto,color){
@@ -159,5 +167,12 @@ function restarTiempo(){
         alert("Game Over");
 
     }
+
+}
+function reiniciarJuego(){
+
+    clearInterval(intervalo);
+
+    iniciarJuego();
 
 }
