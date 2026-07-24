@@ -1,5 +1,14 @@
 let canvas = document.getElementById("areaJuego");
 let ctx = canvas.getContext("2d");
+let gatoX=0;
+let gatoY=0;
+let comidaX=0;
+let comidaY=0;
+let puntos = 0;
+const ANCHO_GATO=50;
+const ALTO_GATO=50;
+const ANCHO_COMIDA=30;
+const ALTO_COMIDA=30;
 
 function graficarGato(){
     graficarRectangulo(
@@ -81,7 +90,17 @@ function detectarColision(){
         gatoY < comidaY + ALTO_COMIDA &&
         gatoY + ALTO_GATO > comidaY
     ){
-        alert("¡El gato comió el limón!");
+
+        puntos++;
+
+        document.getElementById("puntos").textContent = puntos;
+
+        generarComida();
+
+        limpiarCanvas();
+        graficarGato();
+        graficarComida();
+
     }
 
 }
@@ -94,22 +113,20 @@ function graficarComida(){
         "green"
     );
 }
+function generarComida(){
+
+    comidaX = Math.floor(Math.random() * (canvas.width - ANCHO_COMIDA));
+    comidaY = Math.floor(Math.random() * (canvas.height - ALTO_COMIDA));
+
+}
 function iniciarJuego(){
     gatoX=(500-ANCHO_GATO)/2; 
     gatoY=(500-ALTO_GATO)/2;
-    comidaX=500-ANCHO_COMIDA;
-    comidaY=500-ALTO_COMIDA;
+    generarComida();
     graficarGato();
     graficarComida(); 
 }
-let gatoX=0;
-let gatoY=0;
-let comidaX=0;
-let comidaY=0;
-const ANCHO_GATO=50;
-const ALTO_GATO=50;
-const ANCHO_COMIDA=30;
-const ALTO_COMIDA=30;
+
 function graficarRectangulo(x,y,ancho,alto,color){
     ctx.fillStyle=color;
     ctx.fillRect(x,y,ancho,alto);
