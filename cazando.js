@@ -27,6 +27,48 @@ function moverIzquierda(){
     graficarComida();
 
 }
+function moverDerecha(){
+
+    gatoX += 10;
+
+    if(gatoX > canvas.width - ANCHO_GATO){
+        gatoX = canvas.width - ANCHO_GATO;
+    }
+
+    limpiarCanvas();
+
+    graficarGato();
+    graficarComida();
+
+}
+function moverArriba(){
+
+    gatoY -= 10;
+
+    if(gatoY < 0){
+        gatoY = 0;
+    }
+
+    limpiarCanvas();
+
+    graficarGato();
+    graficarComida();
+
+}
+function moverAbajo(){
+
+    gatoY += 10;
+
+    if(gatoY > canvas.height - ALTO_GATO){
+        gatoY = canvas.height - ALTO_GATO;
+    }
+
+    limpiarCanvas();
+
+    graficarGato();
+    graficarComida();
+
+}
 function graficarComida(){
     graficarRectangulo(
         comidaX,
