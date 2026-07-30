@@ -1,166 +1,170 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
     text-align:center;
-    font-family:'Segoe UI', Arial, sans-serif;
-    background:linear-gradient(180deg,#fff8e8,#ffe7b8);
-    margin:0;
-    padding:20px;
-}
-
-h1{
-    margin:0;
-}
-
-.panel{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    margin:20px 0;
-}
-
-.panel span{
-    background:#ffffff;
-    padding:12px 22px;
-    border-radius:15px;
-    border:2px solid #ffd180;
-    font-size:20px;
-    font-weight:bold;
-    color:#6d4c41;
-    box-shadow:0 4px 10px rgba(0,0,0,.15);
-}
-
-canvas{
-    background:#fffdf7;
-    border:8px solid #8d6e63;
-    border-radius:25px;
-    box-shadow:
-        0 10px 20px rgba(0,0,0,.25),
-        inset 0 0 10px rgba(255,255,255,.6);
-
-    /* Fondo mientras aún no ponemos la imagen */
-    background-image:
-        radial-gradient(circle,#ffe0b2 2px,transparent 2px);
-    background-size:35px 35px;
-
-    display:block;
-    margin:20px auto;
-}
-.controles{
-    margin-top:20px;
-}
-
-button{
-    width:65px;
-    height:65px;
-    margin:6px;
-    border:none;
-    border-radius:15px;
-    background:linear-gradient(#ffb74d,#fb8c00);
-    color:white;
-    font-size:28px;
-    cursor:pointer;
-    box-shadow:0 5px 10px rgba(0,0,0,.25);
-    transition:.2s;
-}
-
-button:hover{
-    transform:scale(1.08);
-    background:linear-gradient(#ffa726,#ef6c00);
-}
-
-button:active{
-    transform:scale(.95);
-}
-
-#mensaje{
-    margin-top:20px;
-    min-height:30px;
-    font-size:24px;
-    font-weight:bold;
-    color:#d84315;
+    font-family:'Segoe UI',Arial,sans-serif;
+    background:linear-gradient(135deg,#fde2e4,#fad2e1,#dfe7fd,#cddafd);
+    padding:30px;
 }
 
 .encabezado{
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:30px;
-    margin-bottom:20px;
-}
 
-.gatoDecoracion{
-    width:90px;
-    height:90px;
-    object-fit:contain;
+    margin-bottom:25px;
+
 }
 
 .encabezado h1{
-    margin:0;
-    font-size:42px;
-    color:#ff9800;
-    text-shadow:2px 2px 6px rgba(0,0,0,.25);
+
+    font-size:48px;
+    color:#9d4edd;
+    text-shadow:2px 2px 8px rgba(0,0,0,.15);
+
 }
 
 .autor{
-    margin-top:8px;
+
+    margin-top:10px;
     font-size:18px;
-    color:#795548;
+    color:#6d597a;
     font-weight:bold;
+
 }
-/* Botón Reiniciar */
+
+canvas{
+
+    display:block;
+    margin:25px auto;
+
+    background:#ffffff;
+
+    border:8px solid #cdb4db;
+
+    border-radius:25px;
+
+    box-shadow:0 12px 25px rgba(0,0,0,.18);
+
+}
+
+.panel{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:25px;
+
+    margin:25px;
+
+}
+
+.panel span{
+
+    background:white;
+
+    padding:15px 30px;
+
+    border-radius:18px;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    color:#7b2cbf;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.15);
+
+}
+
+.controles{
+
+    margin-top:20px;
+
+}
+
+button{
+
+    width:70px;
+
+    height:70px;
+
+    margin:8px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:linear-gradient(45deg,#ffafcc,#cdb4db);
+
+    color:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    box-shadow:0 8px 18px rgba(0,0,0,.18);
+
+}
+
+button:hover{
+
+    transform:translateY(-4px);
+
+    background:linear-gradient(45deg,#90dbf4,#a9def9);
+
+}
+
+button:active{
+
+    transform:scale(.95);
+
+}
 
 .reiniciar{
-    width:180px;
-    height:55px;
-    margin-top:15px;
+
+    width:220px;
+
+    height:60px;
+
     font-size:18px;
-    background:linear-gradient(#66bb6a,#43a047);
+
 }
 
-.reiniciar:hover{
-    background:linear-gradient(#4caf50,#2e7d32);
-}
-/* Animaciones */
+#mensaje{
 
-button,
-.panel span,
-canvas{
-    transition:.3s;
-}
+    margin-top:25px;
 
-canvas:hover{
-    transform:scale(1.01);
+    font-size:26px;
+
+    font-weight:bold;
+
+    color:#d63384;
+
 }
-/* Responsive */
 
 @media(max-width:700px){
 
-    .encabezado{
-        flex-direction:column;
-        gap:10px;
-    }
 
-    .gatoDecoracion{
-        width:70px;
-        height:70px;
-    }
 
+    
     canvas{
+
         width:95%;
         height:auto;
+
     }
 
     .panel{
+
         flex-direction:column;
         align-items:center;
+
     }
 
-}
-/* Imágenes del juego */
 
-.gatoSprite{
-    width:60px;
-}
-
-.comidaSprite{
-    width:45px;
 }
