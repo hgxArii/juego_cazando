@@ -3,3 +3,7 @@ Rol: Actúa como un diseñador web profesional experto en HTML y CSS.
 Mejora la interfaz gráfica del juego, utilizando únicamente HTML y CSS. Diseña una interfaz moderna con colores pastel, botones llamativos, tarjetas con sombras, tipografía agradable y una apariencia limpia.
 PROMPT 2
 modificion la apariencia visual utilizando estilos CSS modernos y un diseño responsivo.
+PROMPT 3
+Agrega imágenes decorativas al proyecto y un fondo atractivo utilizando únicamente HTML y CSS. No modifiques el archivo JavaScript.
+PROMPT 4
+Utiliza un fondo relacionado con la naturaleza y mantén una paleta de colores pastel. Las imágenes del juego deben integrarse con el diseño sin afectar el funcionamiento del proyecto.
