@@ -7,9 +7,9 @@ let comidaY=0;
 let puntos = 0;
 let tiempo = 10;
 let intervalo;
-const ANCHO_GATO=50;
-const ALTO_GATO=50;
-const ANCHO_COMIDA=30;
+const ANCHO_GATO=80;
+const ALTO_GATO=90;
+const ANCHO_COMIDA=50;
 const ALTO_COMIDA=30;
 
 function graficarGato(){
@@ -18,7 +18,7 @@ function graficarGato(){
         gatoY,
         ANCHO_GATO,
         ALTO_GATO,
-        "blue"
+        "red"
     );
 }
 function limpiarCanvas(){
@@ -118,7 +118,7 @@ function graficarComida(){
         comidaY,
         ANCHO_COMIDA,
         ALTO_COMIDA,
-        "green"
+        "blue"
     );
 }
 function generarComida(){
@@ -164,7 +164,7 @@ function restarTiempo(){
 
         clearInterval(intervalo);
 
-        alert("Game Over");
+        alert("perdiste");
 
     }
 
@@ -174,5 +174,9 @@ function reiniciarJuego(){
     clearInterval(intervalo);
 
     iniciarJuego();
+
+}
+function desaparecerGato() {
+ctx.clearRect(gatoX, gatoY, ANCHO_GATO, ALTO_GATO);
 
 }
